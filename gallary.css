@@ -1,0 +1,156 @@
+.gallary{
+    color: #121818;
+    text-align: center;
+
+    
+
+}
+
+.gallary h1{
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.gallary p{
+    font-size: 20px;
+    margin: 5px 0;
+    text-align: center;
+    border-bottom: 2px solid rgb(38 47 50);
+
+
+}
+
+
+.menu-bar {
+    width: 90%;
+    border: 2px solid azure;
+    border-radius: 25px;
+    background-color:#ecf6ff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-left: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    
+ 
+}
+
+.menu-bar ul {
+    list-style: none;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-decoration:none ;
+}
+
+.menu-bar li {
+    margin: 0 20px;
+    text-decoration: none;
+
+}
+.menu-bar li a{
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(66, 75, 75);
+    transition: color 0.3s ease-in-out; 
+}
+
+
+.menu-bar li a:hover, .menu-bar li a.active {
+    color: rgb(30, 160, 160); 
+    border-bottom: 2px solid rgb(48, 109, 109);
+
+}
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto; 
+    box-sizing: border-box;
+}
+
+/* .test{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto; 
+    box-sizing: border-box;
+} */
+
+.product {
+    color: rgb(66, 75, 75);
+    background-color:rgb(225, 250, 249);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(235, 229, 229, 0.3);
+    transition: transform 0.8s, opacity 0.8s;
+    opacity: 0;
+    transform: translateX(100%);
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
+    transition: ease-out 0.5;
+  }
+
+.product h2 {
+    font-size: 18px;
+    margin: 0;
+    font-family: math;
+    font-weight: bolder;
+}
+.product img {
+
+    width: 200px;
+    height: 200px;
+}
+.product p {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #5c6366;
+}
+
+.product a {
+    text-decoration: none;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.menu-content:target {
+    display: block;
+    margin-left: 50px;
+    
+}
+
+@media (min-width: 2000px) {
+    .menu-bar {
+        font-size: 24px;
+    }
+
+    .product {
+        width: 200px;
+        margin: 30px;
+    }
+}
+
+
+
+
+

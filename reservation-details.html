@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #reservationDataDisplay {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .reservation {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Reservation Details</h1>
+
+    <div id="reservationDataDisplay"></div>
+
+    <script>
+        // Function to display all reservations
+        function displayAllReservations() {
+            const allReservations = JSON.parse(localStorage.getItem("allReservations"));
+
+            const displayContainer = document.getElementById("reservationDataDisplay");
+
+            if (displayContainer) {
+                if (allReservations) {
+                    allReservations.forEach((reservation, index) => {
+                        displayContainer.innerHTML += generateReservationHTML(reservation, index + 1);
+                    });
+                }
+            }
+        }
+
+        // Function to generate HTML for a single reservation
+        function generateReservationHTML(reservation, index) {
+            return `
+                <div class="reservation">
+                    <p><strong>Reservation ${index}</strong></p>
+                    <p><strong>Name:</strong> ${reservation.name}</p>
+                    <p><strong>Email:</strong> ${reservation.email}</p>
+                    <p><strong>Check-In Date:</strong> ${reservation.checkIn}</p>
+                    <p><strong>Check-Out Date:</strong> ${reservation.checkOut}</p>
+                    <p><strong>Room Type:</strong> ${reservation.roomType}</p>
+                </div>
+            `;
+        }
+
+        // Display all reservations when the page loads
+        displayAllReservations();
+    </script>
+
+</body>
+</html>

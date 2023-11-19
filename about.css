@@ -1,0 +1,38 @@
+#ab {
+    text-align: center;
+}
+
+.about-heading h1 {
+    margin-bottom: 20px;
+}
+
+
+.about{
+    width: 90%;
+    margin: auto;   
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+center{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid rgb(10, 77, 104);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.about .about-us{
+
+    height: 450px;
+    margin: 10px;
+    border-radius: 10px solid rgb(184, 51, 51);
+
+}
+.about p{
+    font-family: cursive;
+    text-align: justify;
+}
+
